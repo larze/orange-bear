@@ -1,0 +1,17 @@
+<h1>New Broadcast</h1>
+
+<%= form_for :broadcast, url: broadcasts_path do |f| %>
+  <p>
+    <%= f.label :broadcast_name %><br>
+    <%= f.text_field :broadcast_name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Listing broadcasts</h1>
+
+<table>
+  <tr>
+    <th>Broadcast Name</th>
+    <th>Description</th>
+  </tr>
+
+  <% @broadcasts.each do |broadcast| %>
+    <tr>
+      <td><%= broadcast.broadcast_name %></td>
+      <td><%= broadcast.description %></td>
+    </tr>
+  <% end %>
+</table>
