@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207064711) do
+ActiveRecord::Schema.define(version: 20131210051003) do
 
   create_table "broadcasts", force: true do |t|
     t.string   "broadcast_name"
@@ -19,6 +19,23 @@ ActiveRecord::Schema.define(version: 20131207064711) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "people", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "slug"
+    t.string   "twitter"
+    t.string   "website"
+    t.text     "bio"
+    t.boolean  "visible"
+    t.boolean  "staff"
+    t.boolean  "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+  end
+
+  add_index "people", ["slug"], name: "index_people_on_slug"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

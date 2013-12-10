@@ -19,6 +19,19 @@
   <% end %>
 </div>
 
+<header class="site__header" role="banner">
+  <h1><%= link_to "Tower.fm", root_url %></h1>
+
+  <nav class="site__nav" role="navigation">
+    <ul>
+      <li><%= link_to "Broadcasts", broadcasts_path %></li>
+      <li><%= link_to "People", people_path %></li>
+    </ul>
+  </nav>
+</header>
+
+
+
 <div class="alerts">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

@@ -1,4 +1,5 @@
 NewTowerFm::Application.routes.draw do
+
   get "welcome/index"
   devise_for :users
 
@@ -6,6 +7,7 @@ NewTowerFm::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :broadcasts
+  resources :people, :people, param: :slug
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
